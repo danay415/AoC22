@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.io.File;
 
@@ -18,6 +20,7 @@ public class AoC22Day1
 
       int calorieCount = 0;
       int maxCal = 0;
+      ArrayList<Integer> calories = new ArrayList<>();
       while (scanner.hasNextLine())
       {
          String cal;
@@ -30,10 +33,13 @@ public class AoC22Day1
             {
                maxCal = calorieCount;
             }
+            calories.add(calorieCount);
             calorieCount = 0;
          }
       }
+      Collections.sort(calories, Collections.reverseOrder());
+      int topThree = calories.get(0) + calories.get(1) + calories.get(2);
       scanner.close();
-      System.out.println(maxCal);
+      System.out.println(topThree);
    }
 }
