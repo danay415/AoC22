@@ -16,7 +16,6 @@ public class AoC22Day1
       File file = new File("Day1Input.txt");
       Scanner scanner = new Scanner(file);
 
-      ArrayList<Integer> calories = new ArrayList<>();
       int calorieCount = 0;
       int maxCal = 0;
       while (scanner.hasNextLine())
