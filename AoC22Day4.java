@@ -45,7 +45,7 @@ public class AoC22Day4 {
             }
 
         }
-
+        System.out.println(contains);
         System.out.println(overlaps);
         scanner.close();
     }
